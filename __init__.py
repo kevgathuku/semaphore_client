@@ -17,10 +17,10 @@ class Semaphore(object):
                                 headers={'Authorization': f'Token {self.auth_token}'})
 
     def teams(self):
-        self.teams = Team(self.client)
+        return Team(self.client)
 
     def secrets(self):
-        self.secrets = Secret(self.client)
+        return Secret(self.client)
 
     def users(self):
         return User(self.client)
